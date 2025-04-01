@@ -1,9 +1,9 @@
 <?php
-require 'db.php'; // Conexão com o banco de dados
+require 'config/config.php'; // Ajuste o caminho para o arquivo config.php
 
-$nome = "Celso Annes";
+$nome = "Mago Supremo";
 $email = "celsoannes@gmail.com";
-$senha = "mellon";
+$senha = "minha_senha_aqui";
 $senha_hash = password_hash($senha, PASSWORD_DEFAULT); // Criptografa a senha
 
 try {
@@ -23,4 +23,3 @@ try {
 } catch (PDOException $e) {
     echo "Erro ao adicionar usuário: " . $e->getMessage();
 }
-?>
